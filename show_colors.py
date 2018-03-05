@@ -22,7 +22,7 @@ def test_styles(bg, fg):
 # test on standard 80-column terminal
 
 colors  = [None,] + list(COLORS[:8])
-brights = list(COLORS[8:])
+brights = ['bright' + c for c in COLORS]
 
 for bg in colors:
     for fg in colors:

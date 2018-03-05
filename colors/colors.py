@@ -66,6 +66,9 @@ def _color_code(spec, base):
     """
     if is_string(spec):
         spec = spec.strip().lower()
+        if spec.startswith('bright'):
+            base += 60
+            spec = spec[6:]
 
     if spec == 'default':
         return _join(base + 9)
